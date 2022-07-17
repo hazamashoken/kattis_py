@@ -1,17 +1,14 @@
-from re import L
-
-
-mul = 1
+mul = -1
 res = []
-num = 0
+num = -1
 for _ in range(int(input())):
-    if mul == 1:
+    if mul == -1:
         mul = int(input())
     else:
         num = int(input())
-    print(mul,num)
-    if num % mul == 0:
+    if num % mul == 0 and num != -1 and mul != -1:
         res.append(num)
-        mul = 1
+        mul = -1
+        num = -1
 for i in res:
     print(i)
